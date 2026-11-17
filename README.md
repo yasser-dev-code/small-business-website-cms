@@ -74,6 +74,15 @@ Changes saved in the admin panel appear on the public website immediately (publi
 
 > **Currency:** all prices are stored as plain numbers in MongoDB and displayed in **Moroccan Dirham (MAD)**, formatted as `120 DH` via a reusable frontend formatting utility (`frontend/src/utils/currency.js`).
 
+Example demo menu prices (Moroccan Dirham):
+
+| Item | Price | | Item | Price |
+|---|---|---|---|---|
+| Moroccan Tea | 15 DH | | Couscous | 90 DH |
+| Coffee | 20 DH | | Grilled Chicken | 95 DH |
+| Fresh Juice | 25 DH | | Moroccan Pastry Dessert | 30 DH |
+| Moroccan Salad | 35 DH | | Tagine | 85 DH |
+
 ## Architecture
 
 ```

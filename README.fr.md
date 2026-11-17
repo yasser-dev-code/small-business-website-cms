@@ -74,6 +74,15 @@ Les modifications enregistrées dans l'administration apparaissent immédiatemen
 
 > **Devise :** tous les prix sont stockés sous forme de nombres dans MongoDB et affichés en **dirham marocain (MAD)**, au format `120 DH`, via un utilitaire de formatage réutilisable (`frontend/src/utils/currency.js`).
 
+Exemples de prix du menu de démonstration (dirham marocain) :
+
+| Plat | Prix | | Plat | Prix |
+|---|---|---|---|---|
+| Thé marocain | 15 DH | | Couscous | 90 DH |
+| Café | 20 DH | | Poulet grillé | 95 DH |
+| Jus frais | 25 DH | | Pâtisserie marocaine | 30 DH |
+| Salade marocaine | 35 DH | | Tagine | 85 DH |
+
 ## Architecture
 
 ```
