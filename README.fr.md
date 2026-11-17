@@ -57,7 +57,7 @@ Les modifications enregistrées dans l'administration apparaissent immédiatemen
 - **Gestion de la page d'accueil** — titre, sous-titre, introduction, image héro, appel à l'action, titre SEO et méta-description.
 - **Gestion des services** — créer/modifier/supprimer, téléversement d'image, publier/dépublier, mise en avant.
 - **Gestion du blog** — créer/modifier/supprimer, image à la une, extrait, contenu, workflow brouillon/publication, slugs générés automatiquement, SEO par article.
-- **Gestion du menu** — créer/modifier/supprimer, prix, catégories, images, publier/dépublier, recherche et filtre par catégorie.
+- **Gestion du menu** — créer/modifier/supprimer, prix (dirham marocain), catégories, images, publier/dépublier, recherche et filtre par catégorie.
 - **Paramètres du restaurant** — nom, adresse, téléphone, email, horaires, réseaux sociaux, section À propos.
 - **Médiathèque** — téléverser, prévisualiser, copier l'URL, supprimer ; validation stricte du type et de la taille des fichiers.
 - Recherche et filtres, boîtes de confirmation, notifications, états vides, indicateurs de chargement, tableaux responsives.
@@ -71,6 +71,8 @@ Les modifications enregistrées dans l'administration apparaissent immédiatemen
 | Base de données | MongoDB + Mongoose |
 | Auth & sécurité | JWT, bcryptjs, Helmet, liste blanche CORS, express-rate-limit, express-validator, Multer (uploads validés) |
 | Tests | Vitest, React Testing Library, Supertest, Playwright (captures / E2E) |
+
+> **Devise :** tous les prix sont stockés sous forme de nombres dans MongoDB et affichés en **dirham marocain (MAD)**, au format `120 DH`, via un utilitaire de formatage réutilisable (`frontend/src/utils/currency.js`).
 
 ## Architecture
 

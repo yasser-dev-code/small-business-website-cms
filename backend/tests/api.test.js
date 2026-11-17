@@ -125,8 +125,9 @@ describe('Menu CRUD', () => {
   let id;
   it('creates a menu item', async () => {
     const res = await request(app).post('/api/admin/menu').set('Authorization', 'Bearer ' + token)
-      .send({ name: 'Duck Confit', description: 'Crispy duck', price: 32, category: 'Mains' });
+      .send({ name: 'Tagine', description: 'Lamb tagine', price: 85, category: 'Mains' });
     expect(res.status).toBe(201);
+    expect(typeof res.body.price).toBe('number');
     id = res.body._id;
   });
   it('validates price', async () => {
@@ -135,13 +136,15 @@ describe('Menu CRUD', () => {
     expect(res.status).toBe(400);
   });
   it('updates a menu item', async () => {
-    const res = await request(app).put('/api/admin/menu/' + id).set('Authorization', 'Bearer ' + token).send({ price: 35 });
-    expect(res.body.price).toBe(35);
+    const res = await request(app).put('/api/admin/menu/' + id).set('Authorization', 'Bearer ' + token).send({ price: 90 });
+    expect(res.body.price).toBe(90);
+    expect(typeof res.body.price).toBe('number');
   });
   it('lists menu publicly', async () => {
     const res = await request(app).get('/api/menu');
     expect(res.status).toBe(200);
     expect(res.body.length).toBeGreaterThanOrEqual(1);
+    expect(typeof res.body[0].price).toBe('number');
   });
 });
 

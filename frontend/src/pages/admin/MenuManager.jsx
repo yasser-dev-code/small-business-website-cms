@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Plus, Pencil, Trash2, Eye, EyeOff, Search } from 'lucide-react';
 import api, { resolveImage } from '../../api/client.js';
+import { formatPrice } from '../../utils/currency.js';
 import useFetch from '../../hooks/useFetch.js';
 import ImageField from '../../components/admin/ImageField.jsx';
 import ConfirmDialog from '../../components/ui/ConfirmDialog.jsx';
@@ -82,7 +83,7 @@ export default function MenuManager() {
                       </div>
                     </td>
                     <td className="px-4 py-3"><Badge tone="gray">{m.category}</Badge></td>
-                    <td className="px-4 py-3 font-medium">{m.price} EUR</td>
+                    <td className="px-4 py-3 font-medium">{formatPrice(m.price)}</td>
                     <td className="px-4 py-3"><Badge tone={m.published ? 'green' : 'gray'}>{m.published ? 'Published' : 'Draft'}</Badge></td>
                     <td className="px-4 py-3">
                       <div className="flex justify-end gap-1">
@@ -106,7 +107,7 @@ export default function MenuManager() {
             <div><label className="label">Name</label><input required className="input" value={editing.name} onChange={(e) => setEditing({ ...editing, name: e.target.value })} /></div>
             <div><label className="label">Description</label><textarea required rows="2" className="input" value={editing.description} onChange={(e) => setEditing({ ...editing, description: e.target.value })} /></div>
             <div className="grid grid-cols-2 gap-4">
-              <div><label className="label">Price (EUR)</label><input required type="number" min="0" step="0.5" className="input" value={editing.price} onChange={(e) => setEditing({ ...editing, price: e.target.value })} /></div>
+              <div><label className="label">Price (DH)</label><input required type="number" min="0" step="0.5" className="input" value={editing.price} onChange={(e) => setEditing({ ...editing, price: e.target.value })} /></div>
               <div><label className="label">Category</label><input required className="input" value={editing.category} onChange={(e) => setEditing({ ...editing, category: e.target.value })} placeholder="Starters" /></div>
             </div>
             <ImageField value={editing.image} onChange={(v) => setEditing({ ...editing, image: v })} />

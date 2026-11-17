@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import useFetch from '../../hooks/useFetch.js';
 import { resolveImage } from '../../api/client.js';
+import { formatPrice } from '../../utils/currency.js';
 import { Spinner, ErrorState, EmptyState } from '../../components/ui/index.jsx';
 
 export default function Menu() {
@@ -43,7 +44,7 @@ export default function Menu() {
                   <div className="flex-1">
                     <div className="flex justify-between items-baseline gap-3 border-b border-dashed border-gray-200 pb-1">
                       <h3 className="font-serif text-lg">{m.name}</h3>
-                      <span className="text-brand-600 font-semibold whitespace-nowrap">{m.price} EUR</span>
+                      <span className="text-brand-600 font-semibold whitespace-nowrap">{formatPrice(m.price)}</span>
                     </div>
                     <p className="text-gray-500 text-sm mt-2">{m.description}</p>
                     <span className="badge bg-brand-50 text-brand-700 mt-2">{m.category}</span>

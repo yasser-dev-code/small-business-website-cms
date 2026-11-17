@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import useFetch from '../../hooks/useFetch.js';
 import { resolveImage } from '../../api/client.js';
+import { formatPrice } from '../../utils/currency.js';
 import { Spinner, ErrorState } from '../../components/ui/index.jsx';
 
 export default function Home() {
@@ -79,7 +80,7 @@ export default function Home() {
                 <div className="p-5">
                   <div className="flex justify-between items-baseline gap-2">
                     <h3 className="font-serif text-lg">{m.name}</h3>
-                    <span className="text-brand-600 font-semibold">{m.price} EUR</span>
+                    <span className="text-brand-600 font-semibold">{formatPrice(m.price)}</span>
                   </div>
                   <p className="text-gray-500 text-sm mt-1">{m.description}</p>
                 </div>

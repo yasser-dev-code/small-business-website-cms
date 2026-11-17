@@ -69,14 +69,14 @@ export async function seedData() {
   ]);
 
   await MenuItem.create([
-    { name: 'French Onion Soup', description: 'Caramelised onions, rich beef broth, gratineed Gruyere crouton.', price: 12, category: 'Starters', image: img('photo-1547592166-23ac45744acd'), featured: true, published: true, order: 1 },
-    { name: 'Escargots de Bourgogne', description: 'Burgundy snails baked with garlic, parsley and butter.', price: 15, category: 'Starters', image: img('photo-1625944230945-1b7dd3b949ab'), published: true, order: 2 },
-    { name: 'Duck Confit', description: 'Slow-cooked duck leg, crispy skin, sarladaise potatoes.', price: 32, category: 'Mains', image: img('photo-1544025162-d76694265947'), featured: true, published: true, order: 1 },
-    { name: 'Coq au Vin', description: 'Chicken braised in red wine with pearl onions and mushrooms.', price: 29, category: 'Mains', image: img('photo-1598515214211-89d3c73ae83b'), published: true, order: 2 },
-    { name: 'Bouillabaisse', description: 'Provencal seafood stew with saffron broth and rouille.', price: 34, category: 'Mains', image: img('photo-1559847844-5315695dadae'), published: true, order: 3 },
-    { name: 'Creme Brulee', description: 'Madagascar vanilla custard with a caramelised sugar crust.', price: 10, category: 'Desserts', image: img('photo-1470124182917-cc6e71b22ecc'), featured: true, published: true, order: 1 },
-    { name: 'Tarte Tatin', description: 'Caramelised upside-down apple tart with creme fraiche.', price: 11, category: 'Desserts', image: img('photo-1568571780765-9276ac8b75a2'), published: true, order: 2 },
-    { name: 'Chateau Bordeaux Glass', description: 'A full-bodied red from our sommelier selection.', price: 14, category: 'Drinks', image: img('photo-1510812431401-41d2bd2722f3'), published: true, order: 1 }
+    { name: 'Moroccan Salad', description: 'Fresh seasonal vegetables, olives, preserved lemon and herbs.', price: 35, category: 'Starters', image: img('photo-1547592166-23ac45744acd'), featured: true, published: true, order: 1 },
+    { name: 'Tagine', description: 'Slow-cooked lamb tagine with prunes, almonds and warm spices.', price: 85, category: 'Mains', image: img('photo-1544025162-d76694265947'), featured: true, published: true, order: 1 },
+    { name: 'Couscous', description: 'Friday-style couscous with seven vegetables and tender beef.', price: 90, category: 'Mains', image: img('photo-1559847844-5315695dadae'), featured: true, published: true, order: 2 },
+    { name: 'Grilled Chicken', description: 'Charcoal-grilled chicken, chermoula marinade, fried potatoes.', price: 95, category: 'Mains', image: img('photo-1598515214211-89d3c73ae83b'), featured: true, published: true, order: 3 },
+    { name: 'Moroccan Pastry Dessert', description: 'Assortment of cornes de gazelle and honey pastries.', price: 30, category: 'Desserts', image: img('photo-1470124182917-cc6e71b22ecc'), published: true, order: 1 },
+    { name: 'Moroccan Tea', description: 'Traditional mint tea poured tableside.', price: 15, category: 'Drinks', image: img('photo-1510812431401-41d2bd2722f3'), published: true, order: 1 },
+    { name: 'Coffee', description: 'Freshly brewed nous-nous or black coffee.', price: 20, category: 'Drinks', image: img('photo-1625944230945-1b7dd3b949ab'), published: true, order: 2 },
+    { name: 'Fresh Juice', description: 'Seasonal fresh-pressed orange or avocado juice.', price: 25, category: 'Drinks', image: img('photo-1568571780765-9276ac8b75a2'), published: true, order: 3 }
   ]);
 
   const posts = [

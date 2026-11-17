@@ -57,7 +57,7 @@ Changes saved in the admin panel appear on the public website immediately (publi
 - **Homepage management** — headline, subtitle, intro, hero image, call-to-action, SEO title & meta description.
 - **Services management** — create/edit/delete, image upload, publish/unpublish, featured flag.
 - **Blog management** — create/edit/delete, featured image, excerpt, content, draft/publish workflow, auto-generated slugs, per-article SEO.
-- **Menu management** — create/edit/delete, prices, categories, images, publish/unpublish, search & category filter.
+- **Menu management** — create/edit/delete, prices (Moroccan Dirham), categories, images, publish/unpublish, search & category filter.
 - **Restaurant settings** — name, address, phone, email, opening hours, social links, About section.
 - **Media library** — upload, preview, copy URL, delete; strict file-type and size validation.
 - Search & filtering, confirmation dialogs, toasts, empty states, loading indicators, responsive tables.
@@ -71,6 +71,8 @@ Changes saved in the admin panel appear on the public website immediately (publi
 | Database | MongoDB + Mongoose |
 | Auth & security | JWT, bcryptjs, Helmet, CORS allow-list, express-rate-limit, express-validator, Multer (validated uploads) |
 | Testing | Vitest, React Testing Library, Supertest, Playwright (screenshots / E2E) |
+
+> **Currency:** all prices are stored as plain numbers in MongoDB and displayed in **Moroccan Dirham (MAD)**, formatted as `120 DH` via a reusable frontend formatting utility (`frontend/src/utils/currency.js`).
 
 ## Architecture
 
